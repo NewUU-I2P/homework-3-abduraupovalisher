@@ -12,13 +12,13 @@ std::string problemSolution4(const std::string &macAddress) {
     std::stringstream(hexNumber) >> std::hex >> firstOctet;
 
 
-    std::string addressType;
+    std::string addressT;
     if (firstOctet % 2 == 0) {
-        addressType = "Unicast";
+        addressT = "Unicast";
     } else if (firstOctet == 0xFF) {
-        addressType = "Broadcast";
+        addressT = "Broadcast";
     } else {
-        addressType = "Multicast";
+        addressT = "Multicast";
     }
     return 0;
     // make use of control flow statements
